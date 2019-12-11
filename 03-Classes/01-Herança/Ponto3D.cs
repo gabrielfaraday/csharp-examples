@@ -16,6 +16,7 @@ namespace Classes.Herança
         public override void CalcularDistancia3()
         {
             //Faz outra coisa ...
+            base.CalcularDistancia3();
         }
     }
 }

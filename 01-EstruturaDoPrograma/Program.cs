@@ -1,4 +1,5 @@
 ﻿using System;
+using EstruturaDoPrograma.Exemplos;
 
 namespace EstruturaDoPrograma
 {

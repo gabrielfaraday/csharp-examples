@@ -89,7 +89,9 @@ namespace Instrucoes
                 string s = Console.ReadLine();
 
                 if (string.IsNullOrEmpty(s))
+                {
                     break;
+                }
 
                 Console.WriteLine(s);
             }
@@ -100,8 +102,10 @@ namespace Instrucoes
             for (int i = 0; i < args.Length; i++)
             {
                 if (args[i].StartsWith("/"))
+                {
                     continue;
-
+                }
+                
                 Console.WriteLine(args[i]);
             }
         }

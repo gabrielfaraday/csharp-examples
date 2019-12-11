@@ -14,6 +14,7 @@ namespace Classes.Herança
         protected void CalcularDistancia()
         {
             //Faz alguma coisa...
+            CalcularDistancia2();
         }
 
         private void CalcularDistancia2()
