@@ -4,6 +4,19 @@ namespace Instrucoes
 {
     class Program
     {
+
+        static void Main()
+        {
+            Declaracoes();
+
+            string[]  a = new string[3];
+            /*
+            a[0] = "1";
+            a[1] = "2";
+            a[2] = "3";
+            */
+            InstrucaoIf(a);
+        }
         static void Declaracoes()
         {
             int a;
@@ -63,7 +76,7 @@ namespace Instrucoes
             {
                 texto = Console.ReadLine();
                 Console.WriteLine(texto);
-            } while (!string.IsNullOrEmpty(texto));
+            } while (!string.IsNullOrEmpty(texto)); //Isso verifica se o texto é nulo ou vazio
         }
 
         static void InstrucaoFor(string[] args)
@@ -76,7 +89,7 @@ namespace Instrucoes
 
         static void InstrucaoForeach(string[] args)
         {
-            foreach (string s in args)
+            foreach (string s in args) //Percorre cada string presente no array
             {
                 Console.WriteLine(s);
             }
@@ -103,9 +116,10 @@ namespace Instrucoes
             {
                 if (args[i].StartsWith("/"))
                 {
+                    //O continue chama o próximo laço e não deixa executar a próxima linha
                     continue;
                 }
-                
+
                 Console.WriteLine(args[i]);
             }
         }
@@ -160,6 +174,8 @@ namespace Instrucoes
 
         static void InstrucaoUsing(string[] args)
         {
+            //O using eliminar o objeto criado automaticamente após realizar as operações com ele
+            //Substitui o método Dispose, do garbage collection
             using (System.IO.TextWriter w = System.IO.File.CreateText("teste.txt"))
             {
                 w.WriteLine("Line 1");
